@@ -1,6 +1,6 @@
 from django.db import models
 from levelupapi.models.event import Event
-from levelupapi.models.game_type import GameType
+from levelupapi.models.gametype import GameType
 
 
 class Game(models.Model):
