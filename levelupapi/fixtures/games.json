@@ -1,0 +1,12 @@
+[
+    {
+      "model": "levelupapi.game",
+      "pk": 1,
+      "fields": {
+        "name": "Fridaaay Poker",
+        "event": 1,
+        "type":1
+      }
+    }
+  ]
+

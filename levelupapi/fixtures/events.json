@@ -1,0 +1,11 @@
+[
+    {
+      "model": "levelupapi.event",
+      "pk": 1,
+      "fields": {
+        "creator":1,
+        "desc": "Very fun game",
+        "time":"2021-12-15T02:49:22.626Z"
+      }
+    }
+  ]
