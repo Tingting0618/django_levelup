@@ -1,11 +1,12 @@
 from django.db import models
-from levelupapi.models.event import Event
+from levelupapi.models.gamer import Gamer
 from levelupapi.models.gametype import GameType
 
 
 class Game(models.Model):
-    name = models.CharField(max_length=50)
-    event = models.ForeignKey(
-        Event, verbose_name="event", on_delete=models.SET_NULL, null=True)
-    type = models.ForeignKey(GameType, verbose_name="game_type", on_delete=models.SET_NULL, null=True)
-                               
+    title = models.CharField(max_length=50,null=True)
+    maker = models.CharField(max_length=50,null=True)
+    game_type = models.ForeignKey(GameType, on_delete=models.SET_NULL, null=True)
+    number_of_players = models.IntegerField(null=True)
+    skill_level = models.IntegerField(null=True)
+    gamer = models.ForeignKey(Gamer,on_delete=models.SET_NULL, null=True,related_name='games')
