@@ -26,9 +26,9 @@ class EventView(ViewSet):
         gamer = Gamer.objects.get(user=request.auth.user)
 
         event = Event()
-        event.time = request.data["time"]
-        event.date = request.data["date"]
-        event.description = request.data["description"]
+        event.time = request.data["eventTime"]
+        event.date = request.data["eventDate"]
+        event.description = request.data["eventDesc"]
         event.organizer = gamer
 
         game = Game.objects.get(pk=request.data["gameId"])
@@ -63,9 +63,9 @@ class EventView(ViewSet):
         organizer = Gamer.objects.get(user=request.auth.user)
 
         event = Event.objects.get(pk=pk)
-        event.description = request.data["description"]
-        event.date = request.data["date"]
-        event.time = request.data["time"]
+        event.description = request.data["eventDesc"]
+        event.date = request.data["eventDate"]
+        event.time = request.data["eventTime"]
         event.organizer = organizer
 
         game = Game.objects.get(pk=request.data["gameId"])
